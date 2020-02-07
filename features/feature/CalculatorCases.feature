@@ -1,4 +1,4 @@
-Feature: Calculator
+Feature: Valida test cases for Calculator
 
   Background:
     Given Enter de calculator
@@ -16,6 +16,7 @@ Feature: Calculator
       | 96789   | -        | 37908   |
       | 96789   | -        | 137908  |
       | 12789   | x        | 76      |
+      | 12.89   | x        | 7.6     |
       | 8879    | ÷        | 23      |
 
   Scenario: Validate character quantity

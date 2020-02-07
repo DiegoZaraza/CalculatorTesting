@@ -22,11 +22,10 @@ end
 Then('Validate result operation') do
   result = operations(@values)
   expect(@CalculatorPage.get_result.to_f).to eq(result)
+  sleep 5
 end
 
 Then('Validate error in the operation') do
-  # expect(@CalculatorPage.get_result.to_f).to eq(0.0)
-  sleep 2
-  binding.pry
   expect(@CalculatorPage.get_history).to eq('Digit Limit Met')
+  sleep 5
 end
