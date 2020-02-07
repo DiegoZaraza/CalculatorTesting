@@ -1,0 +1,12 @@
+source 'https://rubygems.org'
+
+gem 'capybara'
+gem 'rspec'
+gem 'byebug'
+gem 'pry'
+gem 'pry-byebug'
+gem 'cucumber'
+gem 'selenium-webdriver'
+gem 'site_prism'
+gem 'rake'
+gem 'report_builder'
