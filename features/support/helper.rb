@@ -1,6 +1,6 @@
 def operations(values)
   result = ''
-  
+
   values.each do |e|
     if e.to_i > 0
       result += "#{e.to_f}"
@@ -15,5 +15,5 @@ def operations(values)
       end
     end
   end
-  eval(result).round(3)
+  eval(result).round(2)
 end

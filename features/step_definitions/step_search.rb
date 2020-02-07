@@ -12,7 +12,8 @@ end
 
 When('Click the button CE') do
   @CalculatorPage.click_button('CE')
-  @values << value
+  position = @values.length - 1
+  @values.delete(@values[position])
 end
 
 When('Click the button equal') do
@@ -21,7 +22,7 @@ end
 
 Then('Validate result operation') do
   result = operations(@values)
-  expect(@CalculatorPage.get_result.to_f).to eq(result)
+  expect(@CalculatorPage.get_result.to_f.round(2)).to eq(result)
   sleep 5
 end
 

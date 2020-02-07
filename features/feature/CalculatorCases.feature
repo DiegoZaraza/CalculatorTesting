@@ -26,6 +26,15 @@ Feature: Valida test cases for Calculator
     And Click the button equal
     Then Validate error in the operation
 
+    Scenario: Validate character quantity
+      When Click the button '67'
+      And Click the button '+'
+      And Click the button '98'
+      And Click the button CE
+      And Click the button '96'
+      And Click the button equal
+      Then Validate result operation
+
   Scenario: Execution complex operations
     When Click the button '9'
     And Click the button 'x'
