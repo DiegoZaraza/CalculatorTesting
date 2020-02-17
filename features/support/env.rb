@@ -10,6 +10,7 @@ require 'byebug'
 require 'pry'
 require 'pry-byebug'
 require 'report_builder'
+require 'webdrivers'
 
 browser_name = ENV['BROWSER'] || "chrome"
 
@@ -28,7 +29,10 @@ end
 
 # Register Chrome
 Capybara.register_driver :selenium_chrome do |app|
-  Capybara::Selenium::Driver.new(app, :browser => :chrome)
+  Selenium::WebDriver::Chrome::Service.driver_path = "C:/ProgramData/chocolatey/lib/chromedriver/tools/chromedriver.exe"
+  Capybara::Selenium::Driver.new(app, 
+    :url => "http://localhost:9515/",
+    :browser => :chrome)
 end
 
 # Choose a driver to use
